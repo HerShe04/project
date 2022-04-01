@@ -3,8 +3,6 @@
 class Admin_Class
 {	
 
-/* -------------------------set_database_connection_using_PDO---------------------- */
-
 	public function __construct()
 	{ 
         $host_name='localhost';
@@ -20,7 +18,7 @@ class Admin_Class
 		}
 	}
 
-/* ---------------------- test_form_input_data ----------------------------------- */
+/* ---------------------- test_form_input_data -------------------- */
 	
 	public function test_form_input_data($data) {
         $data = trim($data);
@@ -118,7 +116,7 @@ class Admin_Class
     }
 
 
-/* -------------------- Admin Logout ----------------------------------- */
+/* -------------------- Admin Logout ------------- */
 
     public function admin_logout() {
         
@@ -311,7 +309,7 @@ class Admin_Class
 
 
 
-	/* =================Task Related===================== */
+	/* =================project Related===================== */
 
 	public function add_new_task($data){
 		// data insert   
@@ -396,8 +394,6 @@ class Admin_Class
 			echo $e->getMessage();
 		}
 	}
-
-/* ----------------------manage_all_info--------------------- */
 
 	public function manage_all_info($sql) {
 		try{
