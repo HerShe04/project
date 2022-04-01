@@ -47,9 +47,9 @@ class Admin_Class
 	            $_SESSION['security_key'] = 'aaaaaaaaaaaaaaaaaa';
 	//			rewsgf@%^&*nmghjjkh
 	            $_SESSION['user_role'] = $userRow['user_role'];
-	            $_SESSION['temp_password'] = $userRow['temp_password'];
+	            $_SESSION['rand_no'] = $userRow['rand_no'];
 
-          		if($userRow['temp_password'] == null){
+          		if($userRow['rand_no'] == null){
 	                header('Location: task-info.php');
           		}else{
           			header('Location: changePasswordForEmployee.php');
@@ -76,14 +76,14 @@ class Admin_Class
 
 		$user_id = $this->test_form_input_data($data['user_id']);
 		$final_password = md5($password);
-		$temp_password = '';
+		$rand_no = '';
 
 		if($password == $re_password){
 			try{
-				$update_user = $this->db->prepare("UPDATE users SET password = :x, temp_password = :y WHERE user_id = :id ");
+				$update_user = $this->db->prepare("UPDATE users SET password = :x, rand_no = :y WHERE user_id = :id ");
 
 				$update_user->bindparam(':x', $final_password);
-				$update_user->bindparam(':y', $temp_password);
+				$update_user->bindparam(':y', $rand_no);
 				$update_user->bindparam(':id', $user_id);
 				$update_user->execute();
 
@@ -99,7 +99,7 @@ class Admin_Class
 				            $_SESSION['name'] = $userRow['fullname'];
 				            $_SESSION['security_key'] = 'rewsgf@%^&*nmghjjkh';
 				            $_SESSION['user_role'] = $userRow['user_role'];
-				            $_SESSION['temp_password'] = $userRow['temp_password'];
+				            $_SESSION['rand_no'] = $userRow['rand_no'];
 
 				            header('Location: task-info.php');
 			          }
@@ -135,8 +135,8 @@ class Admin_Class
 		$user_fullname  = $this->test_form_input_data($data['em_fullname']);
 		$user_username = $this->test_form_input_data($data['em_username']);
 		$user_email = $this->test_form_input_data($data['em_email']);
-		$temp_password = rand(000000001,10000000);
-		$user_password = $this->test_form_input_data(md5($temp_password));
+		$rand_no = rand(000000001,10000000);
+		$user_password = $this->test_form_input_data(md5($rand_no));
 		$user_role = 2;
 		try{
 			$sqlEmail = "SELECT email FROM users WHERE email = '$user_email' ";
@@ -160,13 +160,13 @@ class Admin_Class
             	return $message;
 
 			}else{
-				$add_user = $this->db->prepare("INSERT INTO users (fullname, username, email, password, temp_password, user_role) VALUES (:x, :y, :z, :a, :b, :c) ");
+				$add_user = $this->db->prepare("INSERT INTO users (fullname, username, email, password, rand_no, user_role) VALUES (:x, :y, :z, :a, :b, :c) ");
 
 				$add_user->bindparam(':x', $user_fullname);
 				$add_user->bindparam(':y', $user_username);
 				$add_user->bindparam(':z', $user_email);
 				$add_user->bindparam(':a', $user_password);
-				$add_user->bindparam(':b', $temp_password);
+				$add_user->bindparam(':b', $rand_no);
 				$add_user->bindparam(':c', $user_role);
 
 				$add_user->execute();
