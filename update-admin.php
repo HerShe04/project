@@ -11,7 +11,6 @@ if ($user_id == NULL || $security_key == NULL) {
     header('Location: index.php');
 }
 
-
 $admin_id = $_GET['admin_id'];
 
 if(isset($_POST['update_current_employee'])){

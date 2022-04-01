@@ -70,6 +70,7 @@ include("include/sidebar.php");
     </div>
 
 
+    
 <?php
 if(isset($_SESSION['update_user_pass'])){
 

@@ -69,7 +69,6 @@ class Admin_Class
     }
 
 
-
     public function change_password_for_employee($data){
     	$password  = $this->test_form_input_data($data['password']);
 		$re_password = $this->test_form_input_data($data['re_password']);

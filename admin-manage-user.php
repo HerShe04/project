@@ -162,8 +162,6 @@ if(isset($_POST['add_new_employee'])){
                 </tr>
                 
               <?php  } ?>
-
-
                 
               </tbody>
             </table>

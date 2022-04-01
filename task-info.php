@@ -30,7 +30,6 @@ $page_name="project_info";
 include("include/sidebar.php");
 
 
-
 ?>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
