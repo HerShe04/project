@@ -44,7 +44,8 @@ class Admin_Class
           		session_start();
 	            $_SESSION['admin_id'] = $userRow['user_id'];
 	            $_SESSION['name'] = $userRow['fullname'];
-	            $_SESSION['security_key'] = 'rewsgf@%^&*nmghjjkh';
+	            $_SESSION['security_key'] = 'aaaaaaaaaaaaaaaaaa';
+	//			rewsgf@%^&*nmghjjkh
 	            $_SESSION['user_role'] = $userRow['user_role'];
 	            $_SESSION['temp_password'] = $userRow['temp_password'];
 

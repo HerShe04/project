@@ -3,7 +3,7 @@ body,
 html {
   height: 100%;
   font-size: 17px;
-  background: #ffffff;
+  background: #ffffff !important;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -18,9 +18,6 @@ nav.sidebar.navbar {
 
 nav.sidebar,
 .main {
-  -webkit-transition: margin 200ms ease-out;
-  -moz-transition: margin 200ms ease-out;
-  -o-transition: margin 200ms ease-out;
   transition: margin 200ms ease-out;
 }
 
@@ -201,9 +198,7 @@ input.input-custom::-moz-placeholder {
 .btn {
   border-radius: 0px;
   font-size: 1rem;
-  -webkit-transition: background-color 0.5s;
-  -moz-transition: background-color 0.5s;
-  -o-transition: background-color 0.5s;
+
   transition: background-color 0.5s;
 }
 
@@ -325,7 +320,7 @@ input.input-custom::-moz-placeholder {
   clear: both;
 }
 .form-custom-login .form-heading {
-  background: #00b16a;
+  background: #000000;
   padding: 10px 15px;
 }
 .form-custom-login .form-heading h2 {
