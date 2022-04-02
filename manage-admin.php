@@ -77,6 +77,5 @@ if(isset($_SESSION['update_user_pass'])){
   echo '<script>alert("Password updated successfully");</script>';
   unset($_SESSION['update_user_pass']);
 }
-include("include/footer.php");
 
 ?>

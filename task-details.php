@@ -105,7 +105,6 @@ $row = $info->fetch(PDO::FETCH_ASSOC);
 <?php
 
 
-include("include/footer.php");
 
 ?>
 
