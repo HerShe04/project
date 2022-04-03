@@ -3,14 +3,17 @@ body,
 html {
   height: 100%;
   font-size: 17px;
-  background: #ffffff !important;
+  background: #ffffff;
   font-family: "Open Sans", sans-serif;
 }
 
+/* remove outer padding */
 .main .row {
   padding: 0px;
   margin: 0px;
 }
+
+/*Remove rounded coners*/
 
 nav.sidebar.navbar {
   border-radius: 0px;
@@ -18,98 +21,123 @@ nav.sidebar.navbar {
 
 nav.sidebar,
 .main {
+  -webkit-transition: margin 200ms ease-out;
+  -moz-transition: margin 200ms ease-out;
+  -o-transition: margin 200ms ease-out;
   transition: margin 200ms ease-out;
 }
 
+/* Add gap to nav and right windows.*/
 .main {
   padding: 10px 10px 0 10px;
 }
 
-/*lets nav bar to be showed on mouseover*/
-nav.sidebar:hover + .main {
-  margin-left: 200px;
-}
+/* .....NavBar: Icon only with coloring/layout.....*/
 
-/*Center Brand*/
-nav.sidebar.navbar.sidebar > .container .navbar-brand,
-.navbar > .container-fluid .navbar-brand {
-  margin-left: 0px;
-}
-/*Center Brand*/
-nav.sidebar .navbar-brand,
-nav.sidebar .navbar-header {
-  text-align: center;
-  width: 100%;
-  margin-left: 0px;
-}
+/*small/medium side display*/
+@media (min-width: 768px) {
+  /*Allow main to be next to Nav*/
+  .main {
+    position: absolute;
+    width: calc(100% - 40px); /*keeps 100% minus nav size*/
+    margin-left: 40px;
+    float: right;
+  }
 
-/*Center Icons*/
-nav.sidebar a {
-  padding-right: 13px;
-}
+  /*lets nav bar to be showed on mouseover*/
+  nav.sidebar:hover + .main {
+    margin-left: 200px;
+  }
 
-/*adds border top to first nav box */
-nav.sidebar .navbar-nav > li:first-child {
-  border-top: 1px #968a00 solid;
-}
+  /*Center Brand*/
+  nav.sidebar.navbar.sidebar > .container .navbar-brand,
+  .navbar > .container-fluid .navbar-brand {
+    margin-left: 0px;
+  }
+  /*Center Brand*/
+  nav.sidebar .navbar-brand,
+  nav.sidebar .navbar-header {
+    text-align: center;
+    width: 100%;
+    margin-left: 0px;
+  }
 
-/* Colors/style dropdown box*/
-nav.sidebar .navbar-nav .open .dropdown-menu {
-  position: static;
-  float: none;
-  width: auto;
-  margin-top: 0;
-  background-color: transparent;
-  border: 0;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
+  /*Center Icons*/
+  nav.sidebar a {
+    padding-right: 13px;
+  }
 
-/*allows nav box to use 100% width*/
-nav.sidebar .navbar-collapse,
-nav.sidebar .container-fluid {
-  padding: 0 0px 0 0px;
-}
+  /*adds border top to first nav box */
+  nav.sidebar .navbar-nav > li:first-child {
+    border-top: 1px #968a00 solid;
+  }
 
-/*colors dropdown box text */
-.navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
-  color: #777;
-}
+  /* Colors/style dropdown box*/
+  nav.sidebar .navbar-nav .open .dropdown-menu {
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
 
-/*gives sidebar width/height*/
-nav.sidebar {
-  width: 200px;
-  height: 100%;
-  margin-left: -160px;
-  float: left;
-  z-index: 8000;
-  margin-bottom: 0px;
-}
+  /*allows nav box to use 100% width*/
+  nav.sidebar .navbar-collapse,
+  nav.sidebar .container-fluid {
+    padding: 0 0px 0 0px;
+  }
 
-/*give sidebar 100% width;*/
-nav.sidebar li {
-  width: 100%;
-}
+  /*colors dropdown box text */
+  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+    color: #777;
+  }
 
-/* Move nav to full on mouse over*/
-nav.sidebar:hover {
-  margin-left: 0px;
-}
-/*for hiden things when navbar hidden*/
-.forAnimate {
-  opacity: 0;
+  /*gives sidebar width/height*/
+  nav.sidebar {
+    width: 200px;
+    height: 100%;
+    margin-left: -160px;
+    float: left;
+    z-index: 8000;
+    margin-bottom: 0px;
+  }
+
+  /*give sidebar 100% width;*/
+  nav.sidebar li {
+    width: 100%;
+  }
+
+  /* Move nav to full on mouse over*/
+  nav.sidebar:hover {
+    margin-left: 0px;
+  }
+  /*for hiden things when navbar hidden*/
+  .forAnimate {
+    opacity: 0;
+  }
 }
 
 /* .....NavBar: Fully showing nav bar..... */
 
-/*Show all nav*/
-nav.sidebar {
-  margin-left: 0px;
-  float: left;
-}
-/*Show hidden items on nav*/
-nav.sidebar .forAnimate {
-  opacity: 1;
+@media (min-width: 1330px) {
+  /*Allow main to be next to Nav*/
+  .main {
+    width: calc(100% - 200px); /*keeps 100% minus nav size*/
+    margin-left: 200px;
+  }
+
+  /*Show all nav*/
+  nav.sidebar {
+    margin-left: 0px;
+    float: left;
+  }
+  /*Show hidden items on nav*/
+  nav.sidebar .forAnimate {
+    opacity: 1;
+  }
 }
 
 nav.sidebar .navbar-nav .open .dropdown-menu > li > a:hover,
@@ -125,8 +153,22 @@ section {
   padding-left: 15px;
 }
 
-.navbar-nav > li > a {
-  line-height: 10px;
+@media (min-width: 768px) {
+  .navbar-nav-custom > li > a {
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-bottom: 25px;
+  }
+
+  .navbar-nav > li > a {
+    line-height: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .well-custom {
+    min-height: 35rem;
+  }
 }
 
 .well-custom {
@@ -198,7 +240,9 @@ input.input-custom::-moz-placeholder {
 .btn {
   border-radius: 0px;
   font-size: 1rem;
-
+  -webkit-transition: background-color 0.5s;
+  -moz-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
   transition: background-color 0.5s;
 }
 
@@ -226,6 +270,13 @@ input.input-custom::-moz-placeholder {
 .btn-danger-custom:hover {
   background-color: #990000;
   color: #fff;
+}
+
+/*product page design*/
+@media (max-width: 768px) {
+  .nav-tabs-custom {
+    margin-top: 1rem;
+  }
 }
 
 .nav-tabs-custom > li.active > a,
@@ -320,7 +371,7 @@ input.input-custom::-moz-placeholder {
   clear: both;
 }
 .form-custom-login .form-heading {
-  background: #000000;
+  background: #00b16a;
   padding: 10px 15px;
 }
 .form-custom-login .form-heading h2 {
@@ -373,6 +424,40 @@ input.input-custom::-moz-placeholder {
 .admin-custom .panel-footer a {
   color: #f63303;
 }
+/*========admin manage salesman page design============*/
+#salesman_pass_cng {
+  display: none;
+}
+
+/*========admin banking page design============*/
+.banking-avail {
+  color: #3aab58;
+}
+
+.banking-wid {
+  color: #c5060b;
+}
+
+.banking-dep {
+  color: #4c9ed9;
+}
+
+.banking-details-form {
+  margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  .banking-date {
+    max-width: 7rem;
+  }
+  .banking-acc {
+    max-width: 13rem;
+  }
+}
+
+.acc-det-cat {
+  color: #3aab6b;
+}
 
 /*========dashboard page design===========*/
 
@@ -383,9 +468,41 @@ input.input-custom::-moz-placeholder {
   font-size: 2rem;
 }
 
+@media (max-width: 767px) {
+  .btn-dash {
+    margin-top: 2rem;
+    width: 100%;
+    padding: 3rem 1rem;
+    font-size: 1.5rem;
+  }
+}
+
+/*===========banking menu design ============*/
+
+.btn-success.active,
+.btn-success:active,
+.open > .dropdown-toggle.btn-success {
+  background-color: #226822 !important;
+}
+
+/*============modal close button design===========*/
+
 .close {
   float: left !important;
   color: red !important;
   opacity: 1 !important;
   font-size: 2rem !important;
+}
+
+/*=============supplier product add page design=======*/
+
+.for-sale {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .btn-menu {
+    width: 11rem;
+    font-size: 0.8rem;
+  }
 }
