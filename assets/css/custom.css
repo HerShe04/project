@@ -282,17 +282,18 @@ input.input-custom::-moz-placeholder {
 .nav-tabs-custom > li.active > a,
 .nav-tabs-custom > li .active > a:focus,
 .nav-tabs-custom > li.active > a:hover {
-  background-color: #e2b840;
+  background-color: #202020;
+  color: white;
 }
 
 .nav-tabs-custom > li.active > a,
 .nav-tabs-custom > li.active > a:focus,
 .nav-tabs-custom > li.active > a:hover {
-  border: 1px solid #012b39;
+  border: 1px solid #000000;
 }
 
 .table-custom {
-  background: #012b39;
+  background: #000000;
   border-radius: 0.25em;
   border-collapse: collapse;
 }
@@ -317,11 +318,11 @@ input.input-custom::-moz-placeholder {
   transition: background 0.25s ease;
 }
 .table-custom > tbody > tr:hover {
-  background: #014055;
+  background: #000000;
 }
 
 .table-single-product {
-  background: #012b39;
+  background: #000000;
   color: #fff;
 }
 
@@ -371,7 +372,7 @@ input.input-custom::-moz-placeholder {
   clear: both;
 }
 .form-custom-login .form-heading {
-  background: #00b16a;
+  background: #000000;
   padding: 10px 15px;
 }
 .form-custom-login .form-heading h2 {
