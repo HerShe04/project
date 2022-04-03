@@ -198,8 +198,7 @@ include("include/sidebar.php");
                   <a title="Delete" href="?delete_task=delete_task&task_id=<?php echo $row['task_id']; ?>" onclick=" return check_delete();"><span class="glyphicon glyphicon-trash"></span></a></td>
                 <?php } ?>
                 </tr>
-                <?php } ?>
-                
+                <?php } ?>               
               </tbody>
             </table>
           </div>

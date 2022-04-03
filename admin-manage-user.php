@@ -170,7 +170,6 @@ if(isset($_POST['add_new_employee'])){
       </div>
     </div>
 
-
 <?php
 if(isset($_SESSION['update_user_pass'])){
 

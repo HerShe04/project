@@ -59,7 +59,6 @@ include("include/sidebar.php");
                   
                   <td><a title="Update Admin" href="update-admin.php?admin_id=<?php echo $row['user_id']; ?>"><span class="glyphicon glyphicon-edit"></span></a>&nbsp;&nbsp;</td>
                 </tr>
-                
               <?php  } ?>
     
               </tbody>

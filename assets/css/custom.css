@@ -371,6 +371,7 @@ input.input-custom::-moz-placeholder {
   display: table;
   clear: both;
 }
+
 .form-custom-login .form-heading {
   background: #000000;
   padding: 10px 15px;

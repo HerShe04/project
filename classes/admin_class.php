@@ -77,6 +77,7 @@ class Admin_Class
 		$final_password = md5($password);
 		$rand_no = '';
 
+		
 		if($password == $re_password){
 			try{
 				$update_user = $this->db->prepare("UPDATE users SET password = :x, rand_no = :y WHERE user_id = :id ");

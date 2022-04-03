@@ -11,7 +11,6 @@ if ($user_id == NULL || $security_key == NULL) {
     header('Location: index.php');
 }
 
-
 // check admin
 $user_role = $_SESSION['user_role'];
 if ($user_role != 1) {

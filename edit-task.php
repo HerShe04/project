@@ -140,7 +140,6 @@ $row = $info->fetch(PDO::FETCH_ASSOC);
 	</script>
 
 
-
 <?php
 
 include("include/footer.php");
